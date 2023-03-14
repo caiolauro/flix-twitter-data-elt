@@ -110,7 +110,7 @@ Additionaly, the design provides:
 * Intermediary object storage layer (s3) minimizes the risk of data loss due to no availability of destination location.
 * Airflow task retries
 
-### **Logging & Monitoring **
+### **Logging & Monitoring**
 
 Logging capabilities are provided end-to-end thorugh, logging lib, cloud watch, Snowflake query history and dbt logging. 
  
