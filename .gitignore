@@ -1,0 +1,6 @@
+airflow/logs/
+airflow/a*
+airflow/w*
+airflow/s*
+env/
+refs/vars*

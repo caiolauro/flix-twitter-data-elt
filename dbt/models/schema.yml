@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: users_stats
+    description: Per user stats -  Most recent number of followers, Most recent location, Average tweet length
+
+    columns:
+      
+      - name: USER_ID
+        description: User Identification Number
+        tests:
+          - unique
+          - not_null
+      
+      - name: USER_MOST_RECENT_LOCATION
+        description: User most recent location based on last tweet done.
+        tests:
+          - dbt_utils.not_empty_string
+
+      - name: USER_MOST_RECENT_FOLLOWERS_COUNT
+        description: User most recent followers count based on last tweet done.
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_max_to_be_between:
+                  max_value: 1000000 # (Optional)
+                  config:
+                    severity: warn
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: number
+      
+      - name: USER_TWEET_AVERAGE_LENGTH
+        description: Average Length of Characters per Tweet made grouped by User.
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: number

@@ -1,0 +1,22 @@
+version: 2
+#https://docs.getdbt.com/reference/resource-properties/external
+# dbt source freshness
+version: 2
+sources:
+  - name: flix
+    schema: raw
+    loader: s3
+    tables:
+      - name: raw_tweets
+        description: Raw source table containing relevant tweet data pre-cleansed by python code.
+        identifier: 
+        loaded_at_field: raw_tweet['created_at']::timestamp
+      
+      - name: raw_tweets_cleansed
+        identifier: 
+        loaded_at_field: tweet_created_at
+        freshness:
+          # Time is in UTC
+          warn_after: {count: 4, period: hour}
+          error_after: {count: 24, period: hour}
+        filter: datediff('day', tweet_created_at, current_timestamp) < 2

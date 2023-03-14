@@ -1,0 +1,13 @@
+flix_data_engineering:
+  target: dev
+  outputs:
+    dev:
+      account: yj68275.sa-east-1.aws
+      database: flix
+      password: {{ env_var("SNOWFLAKE_PASSWORD") }}
+      role: FLIX_TRANSFORM
+      schema: dev
+      threads: 4
+      type: snowflake
+      user: dbt
+      warehouse: compute_wh

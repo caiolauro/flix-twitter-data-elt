@@ -1,0 +1,10 @@
+2023-03-13 14:08:55,814 - __main__ - INFO - File read: data/tweets.json
+2023-03-13 14:08:55,817 - __main__ - INFO - Starting iteration over 52 tweets...
+2023-03-13 14:08:55,821 - __main__ - INFO - Total tweets parsed: 52
+2023-03-13 14:08:56,064 - __main__ - INFO - Writing parquet file...
+2023-03-13 14:08:56,830 - __main__ - INFO - Parquet file written at location: tweets/cleansed_tweets/2023_03_13__14_08_56_064589/2023_03_13__14_08_56_064589__cleansed_tweets.parquet
+2023-03-14 10:32:23,458 - logger - INFO - File read: data/tweets.json
+2023-03-14 10:32:23,470 - logger - INFO - Starting iteration over 52 tweets.
+2023-03-14 10:32:23,477 - logger - INFO - Total tweets parsed: 52
+2023-03-14 10:32:24,671 - logger - INFO - Writing parquet file.
+2023-03-14 10:32:25,849 - logger - INFO - Parquet file written at S3 location: tweets/cleansed_tweets/2023_03_14__10_32_24_671665/2023_03_14__10_32_24_671665__cleansed_tweets.parquet

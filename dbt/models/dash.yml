@@ -1,0 +1,13 @@
+version: 2
+
+exposures:
+  - name: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://app.snowflake.com/sa-east-1.aws/yj68275/#/flix-tweet-analytics-dHSV3DQBj
+    description: Executive Dashboard about tweets containing flixbus hashtag
+    depends_on:
+      - ref('users_stats')
+    owner:
+      name: Caio Lauro
+      email: caiolauro@gmail.com
