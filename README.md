@@ -32,13 +32,15 @@ The goal is to apply ETL tasks over tweet data containing any mention to flixbus
 
 
 
-**[Checkout the DAG code](airflow/dags/tweet_elt.py)**
+### **[Checkout the DAG code](airflow/dags/tweet_elt.py)**
 ## 3. dbt modeling
 <img src="dbt/assets/modeling_dependencies.png">
 
 
 ## 4. Data Viz & Analysis with Snowsight
 <img src="dbt/assets/flix_dash.png">
+
+### **[Access Dashboard](https://app.snowflake.com/sa-east-1.aws/yj68275/#/flix-tweet-analytics-dHSV3DQBj)**
 
 
 ## Handling issues
