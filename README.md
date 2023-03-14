@@ -136,6 +136,7 @@ Logging capabilities are provided end-to-end thorugh, logging lib, cloud watch, 
 * [Setup S3 & Snwoflake Storage Integration](https://github.com/caiolauro/SnowIngest#explaining-how-auto-ingestion-with-snowpipe-works)
 * [Setup Snowflake Objects](refs/snowflake_user_setup.sql)
 * Modify JSON file path at [main.py](twitter_api/main.py)
+* Modify bucket name at [main.py](twitter_api/main.py)
 * Modify log file path at [logger.py](twitter_api/logger.py)
 * Setup a python virtual environment
 
